@@ -37,9 +37,9 @@ const Navbar = () => {
     <nav className="bg-white border-gray-200  dark:bg-gray-700">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto ">
         {isSmallScreen ? (
-          <span className="py-3">Healthy <span className="material-symbols-outlined">
+          <span className="py-3">Healthy {/*<span className="material-symbols-outlined">
           pets
-          </span> Tail</span>
+          </span>*/} Tail</span>
         ) : (
           <Link
             href="/"
