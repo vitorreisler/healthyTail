@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=pets&display=optional"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=pets"
       />
       <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
       
