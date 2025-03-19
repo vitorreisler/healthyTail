@@ -11,20 +11,19 @@ const About = () => {
             alt="Imagem Yon"
           />
         </picture>
-        <p className="text-black max-w-[500px] mx-auto my-auto px-3 py-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-          ad, nesciunt quod quas perspiciatis, numquam optio expedita placeat
-          cum nam, sunt magnam? Facilis illum aut, corporis beatae earum saepe
-          assumenda. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Blanditiis quisquam, ipsum amet ipsam repudiandae quas eaque quo? Modi
-          illo quibusdam nobis debitis nulla perspiciatis fugit, similique
-          blanditiis corrupti voluptas omnis? Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Aperiam vero fugit, rerum id temporibus
-          dicta. Neque impedit unde quam tempore officia vero amet, aut
-          obcaecati cumque modi non exercitationem rerum? Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Architecto id amet eveniet iste
-          omnis accusamus reprehenderit natus optio? Ullam sit aperiam aliquid
-          corrupti harum ex neque laborum quas nam recusandae.
+        <p className="text-black max-w-[590px] mx-auto my-auto px-3 py-3 text-lg rtl  ">
+          ד״ר יון ראיליאנו <br /><br /> וטרינר עם תשוקה אמיתית לבריאות והתנהגות בעלי חיים!
+          🐾✨ <br /><br /> מאז שסיים את לימודיו ברפואה וטרינרית בשנת 2016, ד״ר ראיליאנו לא
+          מפסיק להעמיק, ללמוד ולחדש! עם תואר מוסמך במדעי בעלי החיים והרפואה
+          הווטרינרית ותארים מתקדמים בתחום הרפואה ההתנהגותית, הוא משלב ידע מדעי
+          נרחב עם גישה חומלת וייחודית לכל מטופל.<br /><br /> כחבר בארגונים המובילים בעולם –
+          AVSAB, AAVN ו-ESVCN – ד״ר ראיליאנו מחויב להביא את הסטנדרטים הגבוהים
+          ביותר בטיפול בבעלי חיים, במיוחד בתחומי ההתנהגות והתזונה הקלינית. עם
+          הסמכה יוקרתית בתזונה קלינית ותואר Elite Fear Free Certified, הוא מעניק
+          טיפול מותאם אישית, שמפחית סטרס ומעצים את איכות החיים של כל בעל חיים
+          שהוא פוגש!<br /><br /> אם אתם מחפשים וטרינר עם ידע עמוק, תשוקה אמיתית ומסירות
+          אינסופית – ד״ר יון ראיליאנו כאן כדי להעניק לבעלי החיים שלכם את הטוב
+          ביותר! 🩺🐶🐱
         </p>
       </Layout>
     </>

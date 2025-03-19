@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { FaPaw } from "react-icons/fa";
+
 
 const Navbar = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -37,9 +39,7 @@ const Navbar = () => {
     <nav className="bg-white border-gray-200  dark:bg-gray-700">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto ">
         {isSmallScreen ? (
-          <span className="py-3">Healthy {/*<span className="material-symbols-outlined">
-          pets
-          </span>*/} Tail</span>
+          <span className="flex gap-1 py-3">Healthy <FaPaw />Tail</span>
         ) : (
           <Link
             href="/"
