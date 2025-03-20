@@ -25,7 +25,7 @@ const HomePage = () => {
             ({ src, alt, tituloImage, textoCurto, textoLongo }, index) => {
               return index % 2 === 0 ? (
                 <Fragment key={src}>
-                  <div className="flex flex-wrap items-center justify-center gap-2 shadow-sm border-2 rounded-md">
+                  <div className="flex flex-wrap items-center justify-center gap-2 shadow-md border-2 rounded-md">
                     <picture className="w-[320px] p-4">
                       <img
                         className="w-72 rounded-lg shadow-lg"
@@ -33,30 +33,30 @@ const HomePage = () => {
                         alt={alt}
                       />
                     </picture>
-                    <figcaption className="p-3 text-center rtl">
+                    <figcaption className="p-3 rtl">
                       <h3 className="text-center mb-6 text-2xl">
                         {tituloImage}
                       </h3>
                       {isSmallScreen ? (
-                        <p className="max-w-[600px] overflow-hidden">
+                        <p className="max-w-[600px] overflow-hidden text-xl">
                           {textoCurto}
                           <button
                             onClick={onSubmit}
-                            className=" block mx-auto border-1 shadow-sm p-2 mt-3 rounded-2xl text-sm border-green-500 text-green-500 hover:bg-green-500 hover:text-white "
+                            className=" block mx-auto border-1 shadow-sm p-4 mt-3 rounded-md text-lg border-green-500 text-green-500 duration-500 hover:bg-green-500 hover:text-white "
                           >
-                            more ...
+                            read more
                           </button>
                         </p>
                       ) : (
-                        <p className="max-w-[600px] overflow-hidden">
+                        <p className="max-w-[600px] overflow-hidden text-xl">
                           {textoLongo}
                           {closeButton && (
                             <button
                               onClick={onSubmit}
-                              className="block  mx-auto border-1 shadow-sm p-2 mt-3  rounded-2xl text-sm border-green-500 text-green-500 hover:bg-green-500 hover:text-white text-"
+                              className="block  mx-auto border-1 shadow-sm p-4 mt-3  rounded-md text-lg border-green-500 text-green-500 duration-500 hover:bg-green-500 hover:text-white text-"
                             >
                               {" "}
-                              close ...{" "}
+                              close{" "}
                             </button>
                           )}
                         </p>
@@ -67,33 +67,30 @@ const HomePage = () => {
                 </Fragment>
               ) : (
                 <Fragment key={src}>
-                  <div
-                    className="flex flex-wrap-reverse items-center justify-center gap-9 shadow-sm border-2 rounded-md"
-                  >
-                    <figcaption className="p-3 text-center">
+                  <div className="flex flex-wrap-reverse items-center justify-center gap-9 shadow-sm border-2 rounded-md">
+                    <figcaption className="p-3 rtl">
                       <h3 className="text-center mb-6 text-2xl">
                         {tituloImage}
                       </h3>
                       {isSmallScreen ? (
-                        <p className="max-w-[600px] overflow-hidden">
+                        <p className="max-w-[600px] overflow-hidden text-xl">
                           {textoCurto}
                           <button
                             onClick={onSubmit}
-                            className="border-1 block mx-auto shadow-sm p-2 mt-3 rounded-2xl text-sm border-green-500 text-green-500 hover:bg-green-500 hover:text-white text-"
+                            className="border-1 block mx-auto shadow-sm p-4 mt-3 rounded-md text-lg border-green-500 text-green-500 duration-500 hover:bg-green-500 hover:text-white text-"
                           >
-                            more ...
+                            read more
                           </button>
                         </p>
                       ) : (
-                        <p className="max-w-[600px] overflow-hidden">
+                        <p className="max-w-[600px] overflow-hidden text-xl">
                           {textoLongo}
                           {closeButton && (
                             <button
                               onClick={onSubmit}
-                              className="border-1 block mx-auto shadow-sm p-2 mt-3  rounded-2xl text-sm border-green-500 text-green-500 hover:bg-green-500 hover:text-white text-"
+                              className="border-1 block mx-auto shadow-sm p-4 mt-3  rounded-md text-lg border-green-500 text-green-500 duration-500 hover:bg-green-500 hover:text-white text-"
                             >
-                              {" "}
-                              close ...{" "}
+                              close
                             </button>
                           )}
                         </p>

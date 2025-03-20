@@ -24,3 +24,7 @@ body {
   direction: rtl;
 }
 
+p {
+  white-space: pre-line;
+}
+
