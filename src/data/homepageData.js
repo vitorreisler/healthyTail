@@ -17,7 +17,7 @@ export const homepageData = [
 `,
   },
   {
-    src: "/images/yon2.png",
+    src: "/images/dogeating.jpg",
     alt: "Doctor Yon explain about animal nutrition ",
     tituloImage: "מה חשוב שיהיה באוכל?",
     textoCurto: `

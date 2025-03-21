@@ -25,10 +25,10 @@ const HomePage = () => {
             ({ src, alt, tituloImage, textoCurto, textoLongo }, index) => {
               return index % 2 === 0 ? (
                 <Fragment key={src}>
-                  <div className="flex flex-wrap items-center justify-center gap-2 shadow-md border-2 rounded-md">
-                    <picture className="w-[320px] p-4">
+                  <article className="flex flex-wrap items-center justify-center gap-2 shadow-md border-2 rounded-md">
+                    <picture className="w-[500px] p-4">
                       <img
-                        className="w-72 rounded-lg shadow-lg"
+                        className="w-96 mx-auto rounded-lg shadow-lg"
                         src={src}
                         alt={alt}
                       />
@@ -62,12 +62,12 @@ const HomePage = () => {
                         </p>
                       )}
                     </figcaption>
-                  </div>
+                  </article>
                   <HrElement />
                 </Fragment>
               ) : (
                 <Fragment key={src}>
-                  <div className="flex flex-wrap-reverse items-center justify-center gap-9 shadow-sm border-2 rounded-md">
+                  <article className="flex flex-wrap-reverse items-center justify-center gap-9 shadow-sm border-2 rounded-md">
                     <figcaption className="p-3 rtl">
                       <h3 className="text-center mb-6 text-2xl">
                         {tituloImage}
@@ -96,14 +96,14 @@ const HomePage = () => {
                         </p>
                       )}
                     </figcaption>
-                    <picture className="w-[320px] p-4">
+                    <picture className="w-[500px] p-4">
                       <img
-                        className="w-72 rounded-lg shadow-lg"
+                        className="w-96 mx-auto rounded-lg shadow-lg"
                         src={src}
                         alt={alt}
                       />
                     </picture>
-                  </div>
+                  </article>
                   <HrElement />
                 </Fragment>
               );
