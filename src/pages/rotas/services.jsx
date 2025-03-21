@@ -48,7 +48,7 @@ const Services = () => {
   ];
   return (
     <>
-      <Layout pageName={"Services"}>
+      <Layout pageName={"שירותים"}>
         <div className="flex justify-evenly flex-wrap gap-y-5">
         {
           services.map(({nome, descricao,foto, tag1, tag2, tag3}) => (

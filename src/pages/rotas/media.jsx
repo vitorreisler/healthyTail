@@ -3,9 +3,11 @@ import Layout from "@/components/layout";
 // import { InstagramEmbed } from "react-social-media-embed";
 
 const Media = () => {
+  const iframeClassnames = "border-radius:12px"
   const mediasPodcast = [
     {
-      className: "border-radius:12px",
+      title: `Podcast פרק 155 | על השמנה, עיקורים וסירוסים ואלרגיות, עם הווטרינר ד"ר יון ראיליאנו`,
+      className: iframeClassnames,
       src: "https://open.spotify.com/embed/episode/0UU3VSdtL2CmgocvST88aE?utm_source=generator&t=0",
       width: "100%",
       height: "352",
@@ -17,7 +19,8 @@ const Media = () => {
     },
    
     {
-      className: "border-radius:12px",
+      title: `Podcast פרק 155: ד״ר יון אלכסנדרה ראיליאנו - רפואה וטרינרית מבוססת עובדות`,
+      className: iframeClassnames,
       src: "https://open.spotify.com/embed/episode/2OLOplPsT5igVsM5MNGeiE?utm_source:generator&t:0",
       width: "100%",
       height: "352",
@@ -49,10 +52,11 @@ const Media = () => {
 
   return (
     <>
-      <Layout pageName={"Media"}>
+      <Layout pageName={"תקשורת"}>
         <div className=" flex flex-wrap justify-evenly gap-20">
           {mediasPodcast.map(
             ({
+              title,
               className,
               src,
               width,
@@ -65,6 +69,7 @@ const Media = () => {
               return (
                 <div key={src}>
                   <iframe
+                  title={title}
                     className={className}
                     src={src}
                     width={width}

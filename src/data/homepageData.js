@@ -1,6 +1,6 @@
 export const homepageData = [
   {
-    src: "/images/yon3.jpeg",
+    src: "/images/trainningdog.jpeg",
     alt: "Doctor Yon  ",
     tituloImage: "״צריך לפרוק לו הרבה אנרגיה ולסגור אותו בכלוב אילוף!״ ",
     textoCurto: `

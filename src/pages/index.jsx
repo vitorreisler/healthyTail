@@ -3,7 +3,7 @@ import HomePage from "./rotas/homepage";
 
 export default function Home() {
   return (
-    <Layout pageName={"HomePage"}>
+    <Layout pageName={"דף הבית"}>
       <HomePage/>
     </Layout>
   );

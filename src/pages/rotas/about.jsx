@@ -3,7 +3,7 @@ import Layout from "@/components/layout";
 const About = () => {
   return (
     <>
-      <Layout pageName={"About"}>
+      <Layout pageName={"עלינו "}>
         <picture className="max-w-[350px] my-auto mx-auto">
           <img
             className="rounded-2xl shadow-xl"
