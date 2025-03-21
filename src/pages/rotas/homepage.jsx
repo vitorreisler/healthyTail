@@ -31,6 +31,7 @@ const HomePage = () => {
                         className="w-96 mx-auto rounded-lg shadow-lg"
                         src={src}
                         alt={alt}
+                        loading="lazy"
                       />
                     </picture>
                     <figcaption className="p-3 rtl">
@@ -101,6 +102,7 @@ const HomePage = () => {
                         className="w-96 mx-auto rounded-lg shadow-lg"
                         src={src}
                         alt={alt}
+                        loading="lazy"
                       />
                     </picture>
                   </article>
