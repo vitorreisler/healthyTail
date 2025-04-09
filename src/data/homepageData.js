@@ -31,22 +31,5 @@ export const homepageData = [
 שיהיו רכיבים שהכלב או החתול אוהבים וכמובן שמכילים את כל הנוטריאנטים.
 `,
   },
-  {
-    src: "/images/vet2.jpg",
-    alt: "Descrição da imagem",
-    tituloImage: "Título teste 3",
-    textoCurto:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis, laudantium accusamus",
-    textoLongo:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis, laudantium accusamus repellat eveniet, iste voluptate sapiente odio ullam, aut nemo a expedita voluptatibus id aliquid optio dolores exercitationem sint! Perferendis Tempora perferendis, laudantium accusamus repellat eveniet, iste voluptate sapiente odio ullam, aut nemo a expedita voluptatibus id aliquid optio dolores exercitationem sint! Perferendis Tempora perferendis, laudantium accusamus repellat eveniet, iste voluptate sapiente odio ullam, aut nemo a expedita voluptatibus id aliquid optio dolores exercitationem sint! Perferendis",
-  },
-  {
-    src: "/images/vet1.jpg",
-    alt: "Descrição da imagem",
-    tituloImage: "Título teste 4",
-    textoCurto:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis, laudantium accusamus",
-    textoLongo:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis, laudantium accusamus repellat eveniet, iste voluptate sapiente odio ullam, aut nemo a expedita voluptatibus id aliquid optio dolores exercitationem sint! Perferendis Tempora perferendis, laudantium accusamus repellat eveniet, iste voluptate sapiente odio ullam, aut nemo a expedita voluptatibus id aliquid optio dolores exercitationem sint! Perferendis Tempora perferendis, laudantium accusamus repellat eveniet, iste voluptate sapiente odio ullam, aut nemo a expedita voluptatibus id aliquid optio dolores exercitationem sint! Perferendis",
-  },
+
 ];

@@ -16,7 +16,7 @@ const Layout = ({ children, pageName }) => {
         <Banner />
         {/*<SimpleCarousel images={images} interval={3000}/> */}
       </header>
-      <main className="flex flex-col row-start-2 items-center bg-white max-w-[1200px] mx-auto my-5 rounded shadow-2xl ">
+      <main className="flex flex-col row-start-2 items-center bg-white max-w-[1200px] mx-auto my-5 rounded shadow-2xl  ">
         <h1 className="text-5xl text-black py-4 w-full text-center shadow-md ">
           {pageName}
         </h1>
