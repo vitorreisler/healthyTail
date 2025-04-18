@@ -8,7 +8,7 @@ const ServiceCards = ({ link ,nome, descricao, foto, tag1, tag2, tag3 }) => {
           <img
             className="w-full"
             src={foto}
-            alt={`Imagem do serviço: ${nome}`}
+            alt={`Service Image: ${nome}`}
           />
         </header>
 

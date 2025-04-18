@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Banner = () => {
@@ -13,17 +12,17 @@ const Banner = () => {
       {isSmallScreen ? (
         <div className="w-full">
           <img
-            className="w-full h-52 object-cover"
-            src="/images/banner.jpg"
-            alt=""
+            className="w-full h-60 object-cover"
+            src="/images/banner3.png"
+            alt="dogs and cats"
           />
         </div>
       ) : (
         <div className="w-full">
           <img
-            className="w-full h-96 object-cover"
-            src="/images/banner.jpg"
-            alt=""
+            className="w-full max-h-[570px] object-cover"
+            src="/images/banner3.png"
+            alt="dogs and cats"
           />
         </div>
       )}
