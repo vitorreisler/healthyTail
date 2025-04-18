@@ -5,7 +5,7 @@ const Nutrition = () => {
       <picture className="max-w-[350px] my-auto mx-auto">
         <img
           className="rounded-2xl filter: drop-shadow-2xl"
-          src="/images/nutrition.jpeg"
+          src="/images/nutrition.jpg"
           alt="Dr yon railiano"
           width="350"
         />

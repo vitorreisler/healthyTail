@@ -1,6 +1,6 @@
 export const homepageData = [
   {
-    src: "/images/trainningdog.jpeg",
+    src: "/images/trainningdog.jpg",
     alt: "Doctor Yon  ",
     tituloImage: "״צריך לפרוק לו הרבה אנרגיה ולסגור אותו בכלוב אילוף!״ ",
     textoCurto: `
@@ -17,7 +17,7 @@ export const homepageData = [
 `,
   },
   {
-    src: "/images/dogeating.jpg",
+    src: "/images/dogeating.png",
     alt: "Doctor Yon explain about animal nutrition ",
     tituloImage: "מה חשוב שיהיה באוכל?",
     textoCurto: `
