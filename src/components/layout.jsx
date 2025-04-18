@@ -4,11 +4,11 @@ import Footer from "./footer";
 import Navbar from "./navbar";
 
 const Layout = ({ children, pageName }) => {
-  const images = [
+  {/*const images = [
     '/images/vet1.jpg',
     '/images/vet2.jpg',
     '/images/vet3.jpg',
-  ];
+  ];*/}
   return (
     <>
       <header>

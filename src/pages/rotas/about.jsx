@@ -6,9 +6,9 @@ const About = () => {
       <Layout pageName={"עלינו "}>
         <picture className="max-w-[350px] my-auto mx-auto">
           <img
-            className="rounded-2xl shadow-xl"
-            src="/images/vet2.jpg"
-            alt="Imagem Yon"
+            className="rounded-2xl filter: drop-shadow-2xl"
+            src="/images/yon86bg.png"
+            alt="Dr yon railiano"
           />
         </picture>
         <p className="text-black max-w-[590px] mx-auto my-auto px-3 py-3 text-lg rtl  ">
