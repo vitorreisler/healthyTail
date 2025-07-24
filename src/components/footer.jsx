@@ -28,6 +28,11 @@ const Footer = () => {
             </a>
           </li>
           <li>
+            <a href="/rotas/calculator" className="hover:underline me-4 md:me-6">
+              Calculator
+            </a>
+          </li>
+          <li>
             <a href="/rotas/media" className="hover:underline">
               Media
             </a>

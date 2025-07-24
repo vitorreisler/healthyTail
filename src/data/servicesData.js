@@ -6,7 +6,7 @@ export const services = [
       foto : "/images/nutrition.jpg",
       tag1: "Food",
       tag2: "Quality",
-      tag3: "love",
+      tag3: "Love",
     },
     {
       nome: "תפריט למזון ביתי",
@@ -15,7 +15,7 @@ export const services = [
       foto: "/images/home-nutrition2.png",
       tag1: "Food",
       tag2: "Quality",
-      tag3: "love",
+      tag3: "Love",
     },
     {
       nome: "תכנית ירידה במשקל",

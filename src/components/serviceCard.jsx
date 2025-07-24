@@ -9,6 +9,7 @@ const ServiceCards = ({ link ,nome, descricao, foto, tag1, tag2, tag3 }) => {
             className="w-full"
             src={foto}
             alt={`Service Image: ${nome}`}
+            loading="lazy"
           />
         </header>
 
