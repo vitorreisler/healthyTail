@@ -52,7 +52,7 @@ const Calculator = () => {
     console.log("pesoMetabolico", pesoMetabolico);
     console.log("necessidadeEnergetica", necessidadeEnergetica);
     console.log("caloriasPermitidas", caloriasPermitidas);
-    console.log("Peso total do snack:", totalPesoSnack.toFixed(2), "g");
+    console.log("Peso total do snack:", totalPesoSnack.toFixed(0), "g");
     console.log(gramasPorFruta);
     
   };
@@ -138,35 +138,32 @@ const Calculator = () => {
                     {pesoMetabolico && necessidadeEnergetica && caloriasPermitidas && (
                       <>
                       <li>
-                        משקל מטבולי: {pesoMetabolico.toFixed(2)} ק"ג
+                        צורך אנרגטי: {necessidadeEnergetica.toFixed(0)} קלוריות
                       </li>
                       <li>
-                        צורך אנרגטי: {necessidadeEnergetica.toFixed(2)} קלוריות
-                      </li>
-                      <li>
-                           קלוריות מותרות מחטיף: {caloriasPermitidas.toFixed(2)} קלוריות
+                           קלוריות מותרות מחטיף: {caloriasPermitidas.toFixed(0)} קלוריות
                         </li>
                       </>
                     )}
                   
                     <li className="mt-4 font-bold">
-                      משקל חטיף : {pesoSnack.toFixed(2)} גרם
+                      משקל חטיף : {pesoSnack.toFixed(0)} גרם
                     </li>
                     {fruit1Name && (
                       <li>
-                        {fruit1Name}: {gramasPorFruta[0]?.toFixed(2)} גרם 
+                        {fruit1Name}: {gramasPorFruta[0]?.toFixed(0)} גרם 
  
                       </li>
                     )}
                     {fruit2Name && (
                       <li>
-                        {fruit2Name}: {gramasPorFruta[1]?.toFixed(2)} גרם 
+                        {fruit2Name}: {gramasPorFruta[1]?.toFixed(0)} גרם 
  
                       </li>
                     )}
                     {fruit3Name && (
                       <li>
-                        {fruit3Name}: {gramasPorFruta[2]?.toFixed(2)} גרם 
+                        {fruit3Name}: {gramasPorFruta[2]?.toFixed(0)} גרם 
  
                       </li>
                     )}
