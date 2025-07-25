@@ -167,6 +167,11 @@ const Calculator = () => {
  
                       </li>
                     )}
+                    {pesoSnack && (
+                      <li className="mt-4 font-bold">
+                      מים: {pesoSnack.toFixed(0)} מ"ל
+                    </li>
+                    )}
                   </ul>
                 </>
             </div>
