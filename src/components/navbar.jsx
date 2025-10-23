@@ -38,6 +38,10 @@ const Navbar = () => {
       nome: "Calculator",
       rota: `${rota}/calculator`,
     },
+    {
+      nome: "BCS-System",
+      rota: `${rota}/bcs-system`,
+    },
   ];
   return (
     <nav className="bg-white border-gray-200  dark:bg-gray-700">

@@ -33,8 +33,13 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/rotas/media" className="hover:underline">
+            <a href="/rotas/media" className="hover:underline me-4 md:me-6">
               Media
+            </a>
+          </li>
+          <li>
+            <a href="/rotas/bcs-system" className="hover:underline me-4 md:me-6">
+              BCS-System
             </a>
           </li>
         </ul>

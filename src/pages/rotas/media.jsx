@@ -6,6 +6,18 @@ const Media = () => {
   const iframeClassnames = "border-radius:12px"
   const mediasPodcast = [
     {
+      title: `Dr. Yon Railliano: Challenges in Clinical nutrition`,
+      className: iframeClassnames,
+      src: "https://open.spotify.com/embed/episode/1BQ6NvjluOEHoBfkzWTdfh?utm_source=generator",
+      width: "100%",
+      height: "352",
+      frameBorder: "0",
+      allowfullscreen: "",
+      allow:
+        "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
+      loading: "lazy",
+    },
+    {
       title: `Podcast פרק 155 | על השמנה, עיקורים וסירוסים ואלרגיות, עם הווטרינר ד"ר יון ראיליאנו`,
       className: iframeClassnames,
       src: "https://open.spotify.com/embed/episode/0UU3VSdtL2CmgocvST88aE?utm_source=generator&t=0",
