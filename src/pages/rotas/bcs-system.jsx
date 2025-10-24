@@ -7,32 +7,41 @@ const BCSSystem = () => {
     name: "",
     age: "",
     breed: "",
-    gender: "",
+    gender: "male",
     currentWeight: "",
     petType: "dog",
     bcsScore: null,
-    neutered: null,
+    neutered: "לא צוין",
   });
 
   const [bcsScore, setBcsScore] = useState(null);
   const [idealWeight, setIdealWeight] = useState(null);
   const [recommendations, setRecommendations] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const [weightAdjustmentsConst, setWeightAdjustmentsConst] = useState(0);
 
   const bcsDescriptions = {
     dog: {
       1: "רזה מאוד - עצמות הצלעות, עמוד השדרה והירכיים בולטות בבירור",
       2: "רזה - עצמות הצלעות נמשות בקלות, מעט שומן מכסה אותן",
-      3: "אידיאלי - עצמות הצלעות נמשות בקלות אך לא נראות, מותן ברור",
-      4: "עודף משקל קל - עצמות הצלעות קשות למישוש, מותן פחות ברור",
-      5: "השמנה - עצמות הצלעות קשות מאוד למישוש, אין מותן נראה",
+      3: "מתחת לאידיאלי - עצמות הצלעות נמשות בקלות, מותן נראה",
+      4: "מעט מתחת לאידיאלי - עצמות הצלעות נמשות אך עם מעט מאמץ",
+      5: "אידיאלי - עצמות הצלעות נמשות בקלות אך לא נראות, מותן ברור",
+      6: "מעט מעל האידיאלי - עצמות הצלעות נמשות עם מעט מאמץ",
+      7: "עודף משקל - עצמות הצלעות קשות למישוש, מותן פחות ברור",
+      8: "עודף משקל משמעותי - עצמות הצלעות קשות מאוד למישוש",
+      9: "השמנה - עצמות הצלעות קשות מאוד למישוש, אין מותן נראה",
     },
     cat: {
       1: "רזה מאוד - עצמות הצלעות ועמוד השדרה בולטות מאוד",
       2: "רזה - עצמות הצלעות נמשות בקלות, מותן נראה מלמעלה",
-      3: "אידיאלי - עצמות הצלעות נמשות אך לא נראות, מותן ברור",
-      4: "עודף משקל - עצמות הצלעות קשות למישוש, מותן פחות ברור",
-      5: "השמנה - עצמות הצלעות לא נמשות, בטן תלויה",
+      3: "מתחת לאידיאלי - עצמות הצלעות נמשות בקלות",
+      4: "מעט מתחת לאידיאלי - עצמות הצלעות נמשות אך עם מעט מאמץ",
+      5: "אידיאלי - עצמות הצלעות נמשות אך לא נראות, מותן ברור",
+      6: "מעט מעל האידיאלי - עצמות הצלעות נמשות עם מעט מאמץ",
+      7: "עודף משקל - עצמות הצלעות קשות למישוש, מותן פחות ברור",
+      8: "עודף משקל משמעותי - עצמות הצלעות קשות מאוד למישוש",
+      9: "השמנה - עצמות הצלעות לא נמשות, בטן תלויה",
     },
   };
 
@@ -45,13 +54,17 @@ const BCSSystem = () => {
 
   const calculateIdealWeight = (currentWeight, bcsScore) => {
     const weightAdjustments = {
-      1: 1.15, // צריך להשמין 15%
-      2: 1.05, // צריך להשמין 5%
-      3: 1.0, // משקל אידיאלי
-      4: 0.95, // צריך להוריד 5%
-      5: 0.85, // צריך להוריד 15%
+      1: 1.4, // צריך להשמין 40%
+      2: 1.3, // צריך להשמין 30%
+      3: 1.2, // צריך להשמין 20%
+      4: 0.1, // צריך להשמין 10%
+      5: 1.0, //
+      6: 0.9, // צריך להוריד 10%
+      7: 0.8, // צריך להוריד 20%
+      8: 0.7, // צריך להוריד 30%
+      9: 0.6, // צריך להוריד 40%
     };
-
+    setWeightAdjustmentsConst(weightAdjustments[bcsScore]);
     return currentWeight * weightAdjustments[bcsScore];
   };
 
@@ -63,21 +76,42 @@ const BCSSystem = () => {
   ) => {
     const recommendations = [];
 
-    if (bcsScore === 1 || bcsScore === 2) {
-      recommendations.push("הגדלת כמות המזון היומית ב-10-20%");
+    if (bcsScore <= 2) {
+      recommendations.push("הגדלת כמות המזון היומית ב-30-40%");
       recommendations.push("הוספת מזון עתיר קלוריות ושומנים בריאים");
       recommendations.push("בדיקה וטרינרית לשלילת מחלות");
       recommendations.push("ביקורת חודשית למעקב אחר עלייה במשקל");
     } else if (bcsScore === 3) {
+      recommendations.push("הגדלת כמות המזון היומית ב-20%");
+      recommendations.push("הוספת מזון עתיר קלוריות ושומנים בריאים");
+      recommendations.push("בדיקה וטרינרית לשלילת מחלות");
+      recommendations.push("ביקורת חודשית למעקב אחר עלייה במשקל");
+    } else if (bcsScore === 4) {
+      recommendations.push("הגדלת כמות המזון היומית ב-5-10%");
+      recommendations.push("מעקב שבועי אחר המשקל");
+    } else if (bcsScore === 5) {
       recommendations.push("המשך התזונה הנוכחית - משקל אידיאלי!");
       recommendations.push("פעילות גופנית סדירה לשמירה על כושר");
       recommendations.push("ביקורת שנתית אצל הוטרינר");
-    } else if (bcsScore === 4 || bcsScore === 5) {
-      recommendations.push("הפחתת כמות המזון ב-10-25%");
+    } else if (bcsScore >= 6) {
+      const reductionPercent = Math.min(
+        40,
+        Math.max(
+          10,
+          Math.round(((currentWeight - idealWeight) / currentWeight) * 100)
+        )
+      );
+
+      recommendations.push(`הפחתת כמות המזון ב-${reductionPercent}%`);
       recommendations.push("מעבר למזון דיאטטי דל קלוריות");
       recommendations.push("הגדלת הפעילות הגופנית הדרגתית");
       recommendations.push("ביקורת חודשית למעקב אחר ירידה במשקל");
-      if (bcsScore === 5) {
+
+      if (petData.neutered) {
+        recommendations.push("התייחסות מיוחדת לחיות מחמד מסורסות/מעוקרות");
+      }
+
+      if (bcsScore >= 8) {
         recommendations.push("התייעצות דחופה עם וטרינר לתכנית הרזיה");
       }
     }
@@ -114,11 +148,11 @@ const BCSSystem = () => {
       name: "",
       age: "",
       breed: "",
-      gender: "",
+      gender: "male",
       currentWeight: "",
       petType: "dog",
       bcsScore: null,
-      neutered: null,
+      neutered: "לא צוין",
     });
     setBcsScore(null);
     setIdealWeight(null);
@@ -206,7 +240,7 @@ const BCSSystem = () => {
                     }
                     className="ml-2"
                   />
-                  כלב
+                  🐶כלב
                 </label>
                 <label className="flex items-center cursor-pointer">
                   <input
@@ -219,7 +253,7 @@ const BCSSystem = () => {
                     }
                     className="ml-2"
                   />
-                  חתול
+                  😺חתול
                 </label>
               </div>
             </div>
@@ -252,19 +286,6 @@ const BCSSystem = () => {
                   />
                 </div>
                 <div>
-
-
-
-
-
-
-
-
-
-
-
-
-                  
                   <label className="block text-sm font-medium mb-2">גזע</label>
                   <select
                     value={petData.breed}
@@ -275,22 +296,17 @@ const BCSSystem = () => {
                     <option value="">בחר גזע</option>
                     {petData.petType === "dog"
                       ? dogBreads.map((breed) => (
-                          <option key={breed} value={`${breed}`}>{breed}</option>
+                          <option key={breed} value={`${breed}`}>
+                            {breed}
+                          </option>
                         ))
                       : catBreads.map((breed) => (
-                          <option value={`${breed}`}>{breed}</option>
+                          <option key={breed} value={`${breed}`}>
+                            {breed}
+                          </option>
                         ))}
                   </select>
                 </div>
-
-
-
-
-
-
-
-
-
 
                 <div>
                   <label className="block text-sm font-medium mb-2">מין</label>
@@ -308,38 +324,51 @@ const BCSSystem = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold mb-4 text-center">
-                סטטוס עיקור / סירוס
-              </h3>
-              <div className="flex justify-center gap-4">
-                <label className="flex items-center cursor-pointer">
-                  <input
-                    type="radio"
-                    name="neutered"
-                    value="yes"
-                    checked={petData.neutered === "yes"}
-                    onChange={(e) =>
-                      handleInputChange("neutered", e.target.value)
-                    }
-                    className="ml-2"
-                  />
-                  כן
-                </label>
-                <label className="flex items-center cursor-pointer">
-                  <input
-                    type="radio"
-                    name="neutered"
-                    value="no"
-                    checked={petData.neutered === "no"}
-                    onChange={(e) =>
-                      handleInputChange("neutered", e.target.value)
-                    }
-                    className="ml-2"
-                  />
-                  לא
-                </label>
-              </div>
+            <div className="mt-4 bg-blue-50 p-4 rounded-lg">
+              <label className="flex items-center justify-between cursor-pointer">
+                <div>
+                  <span className="text-sm font-medium">
+                    {petData.petType === "dog"
+                      ? petData.gender === "male"
+                        ? "האם הכלב מסורס?"
+                        : "האם הכלבה מעוקרת?"
+                      : petData.gender === "male"
+                      ? "האם החתול מסורס?"
+                      : "האם החתולה מעוקרת?"}
+                  </span>
+                  <div className="text-xs text-gray-600 mt-1">
+                    חיות מחמד מסורסות/מעוקרות נוטות יותר לעלייה במשקל
+                  </div>
+                </div>
+                <div className="flex justify-center gap-4">
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="neutered"
+                      value="yes"
+                      checked={petData.neutered === "yes"}
+                      onChange={(e) =>
+                        handleInputChange("neutered", e.target.value)
+                      }
+                      className="ml-2"
+                    />
+                    כן
+                  </label>
+                  <label className="flex items-center cursor-pointer">
+                    <input
+                      type="radio"
+                      name="neutered"
+                      value="no"
+                      checked={petData.neutered === "no"}
+                      onChange={(e) =>
+                        handleInputChange("neutered", e.target.value)
+                      }
+                      className="ml-2"
+                    />
+                    לא
+                  </label>
+                </div>
+              </label>
             </div>
 
             {/* משקל נוכחי */}
@@ -366,13 +395,12 @@ const BCSSystem = () => {
               </div>
             </div>
 
-            {/* הערכת BCS */}
             <div className="bg-white p-4 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-4 text-center">
                 הערכת מצב הגוף (BCS)
               </h3>
               <p className="text-center mb-4 text-gray-600">
-                בחר את הציון המתאים ביותר למצב הגוף של החיה:
+                בחר את הציון המתאים ביותר למצב הגוף של החיה (1-9):
               </p>
               {/*TESTE  */}
               {petData.petType === "dog" ? (
@@ -388,37 +416,44 @@ const BCSSystem = () => {
                   className="mx-auto mb-4 max-h-60 object-contain"
                 />
               )}
-
               {/*FIM TESTE */}
 
-              <div className="space-y-3">
-                {[1, 2, 3, 4, 5].map((score) => (
-                  <label
+              <div className="grid grid-cols-3 gap-2 mb-4">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((score) => (
+                  <button
                     key={score}
-                    className="flex items-start cursor-pointer p-3 border rounded-md hover:bg-gray-50 transition-colors"
+                    type="button"
+                    value={score}
+                    onClick={() => {
+                      setBcsScore(score);
+                      setPetData((prev) => ({ ...prev, bcsScore: score }));
+                    }}
+                    className={`p-3 rounded-lg border-2 transition-colors ${
+                      bcsScore === score
+                        ? "border-blue-500 bg-blue-100 text-blue-800"
+                        : score <= 3
+                        ? "border-blue-200 bg-blue-50 hover:bg-blue-100"
+                        : score === 5
+                        ? "border-green-200 bg-green-50 hover:bg-green-100"
+                        : "border-red-200 bg-red-50 hover:bg-red-100"
+                    }`}
                   >
-                    <input
-                      type="radio"
-                      name="bcsScore"
-                      value={score}
-                      checked={bcsScore === score}
-                      onChange={(e) => {
-                        const score = parseInt(e.target.value);
-                        setBcsScore(score);
-                        setPetData((prev) => ({ ...prev, bcsScore: score }));
-                      }}
-                      className="mt-1 ml-3"
-                      required
-                    />
-                    <div>
-                      <div className="font-medium">ציון {score}</div>
-                      <div className="text-sm text-gray-600 mt-1">
-                        {bcsDescriptions[petData.petType][score]}
-                      </div>
-                    </div>
-                  </label>
+                    <div className="font-bold text-lg">{score}</div>
+                    {score <= 3 && <div className="text-xs">רזה</div>}
+                    {score === 5 && <div className="text-xs">אידיאלי</div>}
+                    {score >= 7 && <div className="text-xs">עודף משקל</div>}
+                  </button>
                 ))}
               </div>
+
+              {bcsScore && (
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-medium mb-2">ציון {bcsScore}:</h4>
+                  <p className="text-sm text-gray-700">
+                    {bcsDescriptions[petData.petType][bcsScore]}
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="flex justify-center">
@@ -449,13 +484,13 @@ const BCSSystem = () => {
                   <strong>משקל נוכחי:</strong> {petData.currentWeight} ק"ג
                 </div>
                 <div>
-                  <strong>ציון BCS:</strong> {bcsScore}/5
+                  <strong>ציון BCS:</strong> {bcsScore}/9
                 </div>
                 <div>
                   <strong>עיקור / סירוס:</strong>{" "}
                   {petData.neutered === "yes"
                     ? "כן"
-                    : petData.neutered === "no"
+                    : petData.neutered == "no"
                     ? "לא"
                     : "לא צוין"}
                 </div>
@@ -518,6 +553,7 @@ const BCSSystem = () => {
           </div>
         )}
       </div>
+      {console.log(petData)}
     </Layout>
   );
 };

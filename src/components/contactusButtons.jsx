@@ -1,4 +1,13 @@
-const ContactusButtons = ({name, age,gender,breet,currentWeight, petType,bcsScore,neutered}) => {
+const ContactusButtons = ({
+  name,
+  age,
+  gender,
+  breet,
+  currentWeight,
+  petType,
+  bcsScore,
+  neutered,
+}) => {
   return (
     <div className=" flex flex-col items-center gap-y-5">
       <a
@@ -16,7 +25,6 @@ const ContactusButtons = ({name, age,gender,breet,currentWeight, petType,bcsScor
       >
         WhatsApp
       </a>
-
     </div>
   );
 };
