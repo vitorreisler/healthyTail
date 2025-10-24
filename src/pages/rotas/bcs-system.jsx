@@ -439,9 +439,14 @@ const BCSSystem = () => {
                     }`}
                   >
                     <div className="font-bold text-lg">{score}</div>
-                    {score <= 3 && <div className="text-xs">רזה</div>}
+                    {score <= 2 && <div className="text-xs"> רזה מאוד</div>}
+                    {score === 3 && <div className="text-xs">רזה</div>}
+                    {score === 4 && <div className="text-xs">רזה</div>}
                     {score === 5 && <div className="text-xs">אידיאלי</div>}
-                    {score >= 7 && <div className="text-xs">עודף משקל</div>}
+                    {score === 6 && <div className="text-xs"> מעל האידיאלי</div>}
+                    {score === 7 && <div className="text-xs">עודף משקל</div>}
+                    {score === 8 && <div className="text-xs">השמנה</div>}
+                    {score === 9 && <div className="text-xs"> השמנה קיצונית</div>}
                   </button>
                 ))}
               </div>
