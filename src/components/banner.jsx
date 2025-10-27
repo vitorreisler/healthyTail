@@ -6,7 +6,7 @@ const Banner = () => {
     if (window.screen.width < 500) {
       setIsSmallScreen(window.screen.width < 500);
     }
-  }, []);
+  }, [isSmallScreen]); // quaklquer coisa tirar a dependencia
   return (
     <>
       {isSmallScreen ? (
@@ -20,7 +20,7 @@ const Banner = () => {
       ) : (
         <div className="w-full">
           <img
-            className="w-full max-h-[570px] object-cover"
+            className="w-full max-h-[480px] object-cover object-top"
             src="/images/banner3.png"
             alt="dogs and cats"
           />
