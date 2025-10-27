@@ -12,7 +12,7 @@ const ContactusButtons = ({
     <div className=" flex flex-col items-center gap-y-5">
       <a
         target="_blank"
-        href={`https://api.whatsapp.com/send?phone=972542657358&text=שלום רציתי יותר מידע לגבי ה${petType} שלי%0A
+        href={`https://api.whatsapp.com/send?phone=972542657358&text=שלום רציתי יותר מידע לגבי ה${petType === "dog" ? ("כלב"):("חתול") } שלי%0A
             שם: ${name || ""}%0A
             גיל: ${age || ""}%0A
             מין: ${gender || ""}%0A
