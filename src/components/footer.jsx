@@ -1,11 +1,12 @@
 import { Fragment } from "react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <Fragment>
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2025{" "}
+          © {currentYear}{" "}
           <a target="_blank" href="https://www.instagram.com/healthy.tail?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="hover:underline">
             HealthyTail
           </a>
